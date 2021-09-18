@@ -7,6 +7,7 @@ defmodule RecipxApiWeb.Router do
 
   scope "/api", RecipxApiWeb do
     pipe_through :api
+    resources "/recipes", RecipeController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
